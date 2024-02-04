@@ -1,0 +1,113 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+} 
+html , body{
+     width: 100%;
+     height: 100vh;
+     background-image: url('assets/bg.png');
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     position: relative;
+     overflow: hidden;
+}
+header{
+     background-color: black;
+     width: 100%;
+     color: white;
+     height: 150px;
+     /* text-align: end; */
+     display: flex;
+     justify-content: flex-end;
+    
+}  
+nav{
+     /* border: 1px solid white; */
+     width: 70%;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+
+} 
+nav .text{
+     font-size: 26px;
+} 
+.score-border{
+     font-weight: 600;
+     border: 2px solid white;
+     padding: 0.8rem;
+     border-radius: 20px;
+     -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+     -ms-border-radius: 20px;
+     -o-border-radius: 20px;
+}
+.name{
+     text-decoration: underline;
+     text-decoration-color: brown;
+     -moz-text-decoration-color: brown;
+} 
+.image{
+     width: 200px;
+  /* position: relative; */
+
+} 
+.image img{
+     width: 200px;
+     position:absolute;
+     bottom:0 ;
+     left: 250px;
+     z-index: 1;
+
+} 
+.image2{
+     width: 300px;
+     width: 100%;
+
+}
+.image2 img{
+     width: 200px;
+     position:absolute;
+     bottom:0 ;
+     right: 50px;
+     /* animation:obstacleAni 2s linear infinite ;
+     -webkit-animation:obstacleAni 2s linear infinite ;
+     */
+} 
+/* throgh Javascript Class */
+.jump{
+      animation: dino 0.7s linear;
+      -webkit-animation: dino 0.7s linear;
+}  
+.gameOver{
+     text-align: center;
+     margin-top: 200px;
+     visibility: hidden;
+}
+@keyframes dino {
+    0%{
+         bottom:0;
+    } 
+    50%{
+         bottom: 450px;
+    } 
+    100%{
+         bottom: 0;
+    }   
+} 
+.obstacleAni{
+    animation:obstacleAni 2s linear infinite ;
+    -webkit-animation:obstacleAni 2s linear infinite ;
+   
+}
+
+@keyframes obstacleAni {
+     0%{
+         left: 90vw;
+     } 
+     100%{
+         left: -25vw;
+     }
+}
